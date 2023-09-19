@@ -1,2 +1,2 @@
 # Homeworks
-This is my repository for my homeworks
+This is my repository for my homeworks.
