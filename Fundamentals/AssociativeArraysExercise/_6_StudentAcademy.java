@@ -28,6 +28,7 @@ public class _6_StudentAcademy {
             String studentName = kvp.getKey();
             List<Double> grades = kvp.getValue();
             double average = getAverageGrade(grades);
+            //double average = grades.stream().mapToDouble(a -> a).average().orElse(0.0);
 
             if (average >= 4.50) {
                 studentsAverageGrade.put(studentName, average);
