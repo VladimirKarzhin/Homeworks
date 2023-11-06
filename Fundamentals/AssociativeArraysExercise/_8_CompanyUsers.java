@@ -15,8 +15,10 @@ public class _8_CompanyUsers {
             String employeeId = commandParts[1];
 
             if (companyEmployees.containsKey(companyName)) {
-                List<String> currentEmployee = companyEmployees.get(companyName);
-                currentEmployee.add(employeeId);
+                List<String> currentEmployees = companyEmployees.get(companyName);
+                if (!currentEmployees.contains(employeeId)) {
+                    currentEmployees.add(employeeId);
+                }
             } else {
                 companyEmployees.put(companyName, new ArrayList<>());
                 companyEmployees.get(companyName).add(employeeId);
