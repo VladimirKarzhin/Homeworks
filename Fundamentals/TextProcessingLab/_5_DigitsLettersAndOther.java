@@ -22,7 +22,6 @@ public class _5_DigitsLettersAndOther {
                 others.append(ch);
             }
         }
-        System.out.println(digits.toString());
         System.out.println(letters.toString());
         System.out.println(others.toString());
     }
