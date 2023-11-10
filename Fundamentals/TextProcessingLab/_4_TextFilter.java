@@ -15,7 +15,7 @@ public class _4_TextFilter {
             text = text.replace(word, replacement);
 
         }
-        System.out.println(text);
+        System.out.println(replacement);
     }
 
     private static String getReplacement(String word) {
