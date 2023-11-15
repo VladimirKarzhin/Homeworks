@@ -40,6 +40,6 @@ public class _8_LettersChangeNumbers {
             number += positionLowerLetter;
         }
 
-        
+        return number;
     }
 }
