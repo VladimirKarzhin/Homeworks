@@ -1,5 +1,7 @@
 package TheFinalExamPreparation._3_Exam;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +15,8 @@ public class _2_AdAstra {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
 
-        StringBuilder foodsOutput = new StringBuilder();
+        //StringBuilder foodsOutput = new StringBuilder();
+        List<String> foodsOutput = new ArrayList<>();
 
         int totalCalories = 0;
 
@@ -23,13 +26,15 @@ public class _2_AdAstra {
             int kcal = Integer.parseInt(matcher.group("calories"));
 
             totalCalories += kcal;
-            String output = String.format("Item: %s, Best before: %s, Nutrition: %d%n", typeFood, expiration, kcal);
-            foodsOutput.append(output);
+            String output = String.format("Item: %s, Best before: %s, Nutrition: %d", typeFood, expiration, kcal);
+            foodsOutput.add(output);
+            //foodsOutput.append(output);
         }
         int days =  totalCalories / 2000;
         System.out.printf("You have food to last you for: %d days!%n", days);
-        System.out.println(foodsOutput);
-
-
+        //System.out.println(foodsOutput);
+        for (String line : foodsOutput) {
+            System.out.println(line);
+        }
     }
 }
