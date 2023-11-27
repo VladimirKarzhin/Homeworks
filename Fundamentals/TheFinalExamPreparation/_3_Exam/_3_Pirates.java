@@ -11,7 +11,7 @@ public class _3_Pirates {
         String input = scanner.nextLine();
 
         Map<String, Integer> townPopulation = new LinkedHashMap<>();
-    
+        Map<String, Integer> townGold = new LinkedHashMap<>();
 
         while (!input.equals("Sail")) {
             String[] commandParts = input.split("\\|\\|");
